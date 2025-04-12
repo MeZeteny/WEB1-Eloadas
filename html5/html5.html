@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5</title>
+    <link rel="stylesheet" href="html5style.css">
+</head>
+<body>
+    <header>
+        <h1>HTML5 példák</h1>
+    </header>
+
+    <nav>
+        <a href="../index.html">Főoldal</a>
+        <a href="tablazat.html">Táblázat</a>
+        <a href="html5/html5.html" class="active">HTML5</a>
+        <a href="chartj.html">ChartJs</a>
+        <a href="ajax.html">AJAX</a>
+        <a href="oojs.html">OOJS</a>
+    </nav>
+
+    <aside>
+        <p>Aside tároló</p>
+    </aside>
+
+    <div class="content">
+        <h2>HTML5 példák, kattintson a gombokra, hogy lásson 1-1 példát az alábbiakra</h2>
+        <!-- Web Storage -->
+        <h3>Web storage</h3>
+        <button onclick="localStorage.setItem('name', 'Web Storage')">Tárolás</button>
+        <button onclick="alert(localStorage.getItem('name'))">Kiolvasás</button>
+
+        <!-- Web Workers -->
+        <script>
+        const worker = new Worker(URL.createObjectURL(new Blob([`
+            onmessage = function(e) {
+            postMessage('Üzenet a Worker-től: ' + e.data);
+            }
+        `], { type: 'application/javascript' })));
+        worker.onmessage = function(e) { alert(e.data); };
+        worker.postMessage('Szép napot');
+        </script>
+
+        <!-- Server-Sent Events -->
+        <div id="sse"></div>
+        <script>
+        const evtSource = new EventSource('/sse-endpoint');
+        evtSource.onmessage = function(event) {
+            document.getElementById('sse').innerText += event.data + '\n';
+        };
+        </script>
+
+        <!-- Geolocation API -->
+        <h3>Helymeghatározás</h3>
+        <button onclick="navigator.geolocation.getCurrentPosition(pos => alert(`Lat: ${pos.coords.latitude}, Lng: ${pos.coords.longitude}`))">
+        Helymeghatározás
+        </button>
+
+        <!-- Drag and Drop API -->
+        <h3>Drag and drop</h3>
+        <div id="dropZone" ondrop="drop(event)" ondragover="event.preventDefault()" style="width:100px;height:100px;border:1px solid black;"></div>
+        <div draggable="true" ondragstart="event.dataTransfer.setData('text', 'Húzott elem')" style="width:50px;height:50px;background:red;"></div>
+        <script>
+        function drop(event) { alert(event.dataTransfer.getData('text')); }
+        </script>
+
+        <!-- Canvas -->
+        <h3>Canvas</h3>
+        <canvas id="canvas" width="200" height="200"></canvas>
+        <script>
+        const ctx = document.getElementById('canvas').getContext('2d');
+        ctx.fillStyle = 'blue';
+        ctx.fillRect(50, 50, 100, 100);
+        </script>
+
+        <!-- SVG -->
+        <h3>SVG</h3>
+        <svg width="100" height="100">
+        <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" />
+        </svg>
+    </div>
+
+    <footer>
+        <p>Készítette: Mészáros Zétény, ZD6NGF és Csík Miklós, BBOT0G</p>
+    </footer>
+</body>
+</html>
