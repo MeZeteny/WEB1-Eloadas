@@ -1,0 +1,77 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+body {
+    display: grid;
+    grid-template-areas: 
+        "header header header"
+        "nav content aside"
+        "footer footer footer";
+    grid-template-columns: 200px 1fr 200px;
+    grid-template-rows: auto 1fr auto;
+    gap: 10px;
+    height: 100%;
+}
+header {
+    grid-area: header;
+    background-color: #BEDBBB;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+nav {
+    grid-area: nav;
+    background-color: #eee;
+    padding: 1rem;
+    height: 100%;
+}
+nav a {
+    display: block;
+    padding: 0.5rem;
+    color: #000;
+    text-decoration: none;
+}
+nav a.active {
+    font-weight: bold;
+    color: #8DB596;
+}
+aside {
+    grid-area: aside;
+    background-color: #f4f4f4;
+    padding: 1rem;
+    height: 100%;
+}
+.content {
+    grid-area: content;
+    padding: 1rem;
+    height: 100%;
+}
+footer {
+    grid-area: footer;
+    background-color: #707070;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
+th {
+    cursor: pointer;
+    background-color: #f0f0f0;
+}
+input[type="text"] {
+    width: 100%;
+    box-sizing: border-box;
+}
+form {
+    margin-bottom: 1rem;
+}

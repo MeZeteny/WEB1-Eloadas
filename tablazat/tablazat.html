@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tablazatstyle.css">
+    <title>Index</title>
+</head>
+<body>
+    <header>
+        <h1>Web-programozás-1 Előadás Házi feladat</h1>
+    </header>
+
+    <nav>
+        <a href="../index.html">Főoldal</a>
+        <a href="tablazat/tablazat.html" class="active">Táblázat</a>
+        <a href="../html5/html5.html">HTML5</a>
+        <a href="chartj.html">ChartJs</a>
+        <a href="ajax.html">AJAX</a>
+        <a href="oojs.html">OOJS</a>
+    </nav>
+
+    <aside>
+        <p>Aside tároló</p>
+    </aside>
+
+    <div class="content">
+        <h2>CRUD táblázat</h2>
+        <form id="crud-form">
+            <input type="text" id="name" placeholder="Név" required minlength="2" maxlength="20">
+            <input type="text" id="email" placeholder="Email" required pattern="[^@\s]+@[^@\s]+\.[^@\s]+">
+            <input type="text" id="phone" placeholder="Telefon" required minlength="6" maxlength="15">
+            <input type="text" id="city" placeholder="Város" required minlength="2" maxlength="20">
+            <button type="submit">Hozzáadás</button>
+        </form>
+
+        <input type="text" id="search" placeholder="Keresés...">
+
+        <table id="crud-table">
+            <thead>
+                <tr>
+                    <th data-column="name">Név</th>
+                    <th data-column="email">Email</th>
+                    <th data-column="phone">Telefon</th>
+                    <th data-column="city">Város</th>
+                    <th>Művelet</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
+        </table>
+    </div>
+
+    <footer>
+        <p>Készítette: Mészáros Zétény, ZD6NGF és Csík Miklós, BBOT0G</p>
+    </footer>
+
+    <script src="crud.js"></script>
+</body>
+</html>
