@@ -2,14 +2,14 @@
 
 ## Eddig kesz:
 
-Fooldal
-Tablazat
-chartJS
+Fooldal.    
+Tablazat.  
+chartJS.  
 
 ## Majdnem kesz:
 
-ooJS
-html5
+ooJS.  
+html5.  
 
 ## Meg dolgozni kell rajta:
 
