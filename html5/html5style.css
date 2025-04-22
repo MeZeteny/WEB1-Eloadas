@@ -1,11 +1,13 @@
-html, body {
+html,
+body {
     height: 100%;
     margin: 0;
     font-family: Arial, sans-serif;
 }
+
 body {
     display: grid;
-    grid-template-areas: 
+    grid-template-areas:
         "header header header"
         "nav nav nav"
         "content content aside"
@@ -15,6 +17,7 @@ body {
     gap: 10px;
     height: 100%;
 }
+
 header {
     grid-area: header;
     background-color: #BEDBBB;
@@ -22,11 +25,13 @@ header {
     padding: 1rem;
     text-align: center;
 }
+
 nav {
     grid-area: nav;
     background-color: #eee;
     padding: 0.5rem 1rem;
 }
+
 nav a {
     margin-right: 1rem;
     padding: 0.5rem;
@@ -34,21 +39,25 @@ nav a {
     text-decoration: none;
     display: inline-block;
 }
+
 nav a.active {
     font-weight: bold;
     color: #8DB596;
 }
+
 aside {
     grid-area: aside;
     background-color: #f4f4f4;
     padding: 1rem;
     height: 100%;
 }
+
 .content {
     grid-area: content;
     padding: 1rem;
     height: 100%;
 }
+
 footer {
     grid-area: footer;
     background-color: #707070;
@@ -69,4 +78,25 @@ button {
 
 button:hover {
     background-color: #BEDBBB;
+}
+
+.color-picker {
+    margin: 20px;
+    text-align: center;
+}
+
+.color-display {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #ff0000;
+}
+
+.status {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f0f0f0;
 }
