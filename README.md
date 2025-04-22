@@ -5,11 +5,11 @@
 Fooldal.    
 Tablazat.  
 chartJS.  
+html5.  
 
 ## Majdnem kesz:
 
 ooJS.  
-html5.  
 
 ## Meg dolgozni kell rajta:
 
