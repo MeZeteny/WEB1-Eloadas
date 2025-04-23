@@ -6,6 +6,7 @@ Fooldal.
 Tablazat.  
 chartJS.  
 html5.  
+ajax.
 
 ## Majdnem kesz:
 
@@ -13,4 +14,4 @@ ooJS.
 
 ## Meg dolgozni kell rajta:
 
-ajax
+React.
