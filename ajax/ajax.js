@@ -1,5 +1,5 @@
 const API_URL = "http://gamf.nhely.hu/ajax2/";
-const MY_CODE = "AHSSPUabc123";
+const MY_CODE = "BBOT0Gabc123";
 
 document.addEventListener("DOMContentLoaded", () => {
     fetchData();
